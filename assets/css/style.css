@@ -217,6 +217,7 @@ img {
   letter-spacing: 0.15em;
   text-decoration: none;
   position: relative;
+  text-transform: uppercase;
 }
 .button i {
   font-size: inherit;
@@ -259,6 +260,7 @@ img {
   text-decoration: none;
   padding: 10px 48px 10px 16px;
   position: relative;
+  text-transform: uppercase;
 }
 .button-big i {
   font-size: inherit;
