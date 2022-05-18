@@ -1,0 +1,59 @@
+
+// ----------------==>>> SLIDE UP | LEFT | RIGHT
+//slide-up
+.slide-up{
+    opacity: 0;
+    transform: translate3d(0,10rem, 0);
+}
+.slide-up.is-screened{
+    animation: slide-up 1.3s forwards;
+}
+@keyframes slide-up{
+    100%{
+        opacity: 1;
+        transform: translate3d(0,0, 0);
+    }
+}
+//slide-right
+.slide-right{
+    opacity: 0;
+    transform: translate3d(-10rem,0, 0);
+}
+.slide-right.is-screened{
+    animation: slide-right 1.3s forwards;
+}
+@keyframes slide-right{
+    100%{
+        opacity: 1;
+        transform: translate3d(0,0, 0);
+    }
+}
+//slide-left
+.slide-left{
+    opacity: 0;
+    transform: translate3d(10rem,0, 0);
+}
+.slide-left.is-screened{
+    animation: slide-left 1.3s forwards;
+}
+@keyframes slide-left{
+    100%{
+        opacity: 1;
+        transform: translate3d(0,0, 0);
+    }
+}
+
+// ----------------==>>> ZOOM OUT
+.zoom-out{
+    opacity: 0;
+    transform: scale(.8);
+}
+.zoom-out.is-screened{
+    animation: zoom-out 3s forwards;
+}
+@keyframes zoom-out{
+    100%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
