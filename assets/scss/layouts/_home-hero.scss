@@ -1,3 +1,19 @@
 .home-hero{
-   
+    padding: 14px 0;
+    &__content{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: calc( 100vh - 28px);
+        min-height: 300px;
+        h1{
+            color: $white;
+            max-width: 782px;
+            text-shadow: 0px 0px 60px rgba(48, 49, 51, 0.3);
+        }
+        p{
+            color: $white;
+            max-width: 470px;
+        }
+    }
 }

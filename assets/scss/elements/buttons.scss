@@ -4,6 +4,8 @@
     font-weight: 700;
     line-height: 18px;
     letter-spacing: 0.15em;
+    text-decoration: none;
+    position: relative;
     i{
         font-size: inherit;
         position: absolute;
@@ -23,15 +25,59 @@
     &--red{
         color: $white;
         background-color: $red;
+        &:hover{
+            color: $white;
+        }
+    }
+    &--white{
+        color: $red;
+        background-color: $red;
+        &:hover{
+            color: $white;
+        }
+    }
+}
+.button-big{
+    // font-family: 'DM Sans';
+    font-family: 'DM SansBold';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0.15em;
+    text-align: left;
+    text-decoration: none;
+    padding: 10px 48px 10px 16px;
+    position: relative;
+    i{
+        font-size: inherit;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 16px;
+        color: inherit;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+    }
+    &:hover{
+        text-decoration: none;
+        i{
+            font-size: inherit;
+            position: absolute;
+            right: 8px;
+        }
+    }
+    &--red{
+        color: $white;
+        background-color: $red;
+        &:hover{
+            color: $white;
+        }
     }
     &--white{
         color: $red;
         background-color: $white;
+        &:hover{
+            color: $red;
+        }
     }
-}
-.button-big{
-    @extend .button;
-    font-family: 'DM Sans';
-    font-size: 18px;
-    line-height: 23px;
 }

@@ -1,40 +1,19 @@
 
+<?php 
+    $bg_image = get_sub_field('image');
+    if($bg_image){
+        $bg_imageURL = wp_get_attachment_image_url( $image, 'large');
+    }
+    else{
+        $bg_imageURL = get_template_directory_uri().'/assets/images/The-Spine-royal-college-of-physicians 1.PNG';
+    }
+?>
 <section class="home-hero">
-  <!-- Swiper -->
-  <div class="home-hero__slider swiper-container">
-    <div class="swiper-wrapper">
-      <?php
-        $image = get_template_directory_uri().'/assets/images/company.png';
-      ?>
-      <div class="swiper-slide">
-        <div class="home-hero__img" style="background-image:url(<?php echo $image;?>)">
-        </div>
-      </div>
-      <div class="swiper-slide">
-        <div class="home-hero__img" style="background-image:url(<?php echo $image;?>)">
-        </div>
-      </div>
-    </div>  
-    <div class="swiper-pagination"></div>
-    <!-- <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div> -->
-  </div>
-  <div class="container home-hero__text">
-    <div class="row" >
-      <div class="col-md-12">
-        <div class="home-hero__titles">
-          <h1 class="f24">Welcome to</h1>
-          <h1 class="f80">ultimate supreme products</h1>
-        </div>
-        <div class="home-hero__p">
-          <p>
-            Ultimate Supreme Products (USP) is a 100% BEE compliant, privately owned business. 
-            USP is an electronic infrastructure and systems company serving private sector as 
-            well as metros. We specialise in optic fibre, and Fibre based CCTV solutions 
-            installations. We are an accredited Vumatel fibre optic installer.
-          </p>
-        </div> 
-      </div>
+  <div class="container-fluid">
+    <div class="home-hero__content d-flex flex-column justify-content-center align-items-center" style="background-image: url('<?php echo $bg_imageURL; ?>');">
+      <h1><?php echo get_sub_field('title'); ?></h1>
+      <p class="p-large"><?php echo get_sub_field('text'); ?></p>
+      <a href="<?php echo get_sub_field('button_link'); ?>" class="button-big button-big--red" role="button"><?php echo get_sub_field('button_text'); ?><i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
 </section>
