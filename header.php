@@ -35,6 +35,7 @@
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo-white-1.png" alt="site-logo">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+            Menu <span class="btn-icon"><span></span></span> 
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse text-center" id="collapsibleNavbar">
