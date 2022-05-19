@@ -56,7 +56,7 @@ get_header();
 
         <!-- Tab panes -->
         <div class="tab-content">
-          <div id="all-case-studies" class="container tab-pane active"><br>
+          <div id="all-case-studies" class="container tab-pane active">
             <div class="row">
               <div class="row mt-4">
                 <?php 
@@ -91,8 +91,8 @@ get_header();
                           <?php 
                             $term_list = get_the_terms(get_the_id(), 'case-studies-category');
                             foreach($term_list as $term) {?>
-                                <p class="tag bg-red p-1"><?php echo $term->name; ?></p>
-                                <?php 
+                              <p class="tag bg-red"><?php echo $term->name; ?></p>
+                              <?php 
                             }
                           ?>
                         </div>
@@ -109,8 +109,6 @@ get_header();
                 <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
               </div>
             </div>
-            <h3>ALL</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           </div>
           <?php 
             $terms = get_terms( array(
@@ -122,9 +120,65 @@ get_header();
           ?>
           <?php 
             foreach( $terms as $term ) {?>
-              <div id="<?php echo $term->slug;?>" class="container tab-pane fade"><br>
-                <h3><?php echo $term->name; ?></h3>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <div id="<?php echo $term->slug;?>" class="container tab-pane fade">
+                <div class="row">
+                  <div class="row mt-4">
+                    <?php 
+                    // args
+                    $args = array(
+                      'post_type'	=> 'case-studies',
+                      'posts_per_page'=>  -1,
+                      'tax_query' => array(
+                          array(
+                              'taxonomy' => 'case-studies-category',
+                              'field'    => 'slug',
+                              'terms'    => $term->slug, 
+                          ),
+                      ),
+                    );
+                    // query
+                    $the_query = new WP_Query( $args );
+
+                    ?>
+                    <?php 
+                    if( $the_query->have_posts() ): ?>
+                      <?php 
+                      while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                        <div class="col-md-4">
+                          <article class="case-study pt-3 pb-3 mb-5">
+                            <figure class="d-flex justify-content-center align-items-center">
+                              <?php
+                              if(get_the_post_thumbnail_url()){
+                                  the_post_thumbnail();
+                              }
+                              else{
+                                  echo '<span class="d-flex justify-content-center align-items-center">No Image</span>';
+                              }
+                              ?>
+                            </figure>
+                            <h5><?php echo get_the_title(); ?></h5>
+                            <div class="case-study__categories">
+                              <?php 
+                                $term_list = get_the_terms(get_the_id(), 'case-studies-category');
+                                foreach($term_list as $term) {?>
+                                  <p class="tag bg-red"><?php echo $term->name; ?></p>
+                                  <?php 
+                                }
+                              ?>
+                            </div>
+                            <div class="case-study__p ps-4 mt-4 mb-4 border-start border-4 border-red">
+                              <p><?php echo get_the_excerpt(); ?></p>
+                            </div>
+                            <a href="<?php the_permalink(); ?>" class="button button--red" role="button">READ MORE<i class="fa-solid fa-arrow-right"></i></a>
+                          </article>
+                        </div>
+                        <?php 
+                      endwhile; ?>
+                      <?php 
+                    endif; ?>
+                    <?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
+                  </div>
+                </div>
               </div>
               <?php
             }
