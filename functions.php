@@ -58,7 +58,10 @@ if ( function_exists( 'acf_add_options_page' ) ) {
 function the_nav_menu(){
 	add_theme_support('menus');
 	register_nav_menu('primary','Header Navigation');
-	register_nav_menu('secondary','Footer Navigation');
+	register_nav_menu('footer2','Footer Column2');
+	register_nav_menu('footer3','Footer Column3');
+	register_nav_menu('footer4','Footer Column4');
+	register_nav_menu('footer5','Footer Column5');
 }
 add_action('init', 'the_nav_menu');
 

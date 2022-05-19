@@ -49,7 +49,7 @@ get_header();
                   <div class="col-md-4">
                     <figure>                
                       <?php 
-                        $image = get_sub_field('image');
+                        $image = get_sub_field('module_image');
                         if($image){
                             $imageURL = wp_get_attachment_image_url( $image, 'large');
                         }

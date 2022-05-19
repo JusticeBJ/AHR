@@ -16,119 +16,40 @@
             <div class="row mx-auto my-auto justify-content-center"> 
                 <div id="recipeCarousel" class="carousel slide g-0" data-bs-ride="carousel"> 
                     <div class="carousel-inner" role="listbox"> 
-                        <div class="carousel-item active"> 
-                            <div class="col-md-3"> 
-                                <div class="card">
-                                    <div class="card-img"> 
-                                        <?php 
-                                            $bg_image = get_sub_field('image');
-                                            if($bg_image){
-                                                $bg_imageURL = wp_get_attachment_image_url( $image, 'large');
-                                            }
-                                            else{
-                                                $bg_imageURL = get_template_directory_uri().'/assets/images/242611452_229150395849798_1430821725233963132_n.PNG';
-                                            }
-                                        ?>
-                                        <img src="<?php echo $bg_imageURL; ?>" class="img-fluid"> 
-                                    </div> 
-                                    <div class="card-img-overlay">Slide 1</div> 
-                                </div> 
-                            </div> 
-                        </div>
-                        <div class="carousel-item"> 
-                            <div class="col-md-3"> 
-                                <div class="card"> 
-                                <div class="card-img"> 
-                                    <?php 
-                                        $bg_image = get_sub_field('image');
-                                        if($bg_image){
-                                            $bg_imageURL = wp_get_attachment_image_url( $image, 'large');
-                                        }
-                                        else{
-                                            $bg_imageURL = get_template_directory_uri().'/assets/images/242611452_229150395849798_1430821725233963132_n.PNG';
-                                        }
+                        <?php 
+                            $counter= 0;
+                            if(have_rows('slider_images')):
+                                while(have_rows('slider_images')):the_row();
+                                    $carousel_item_status= '';
+                                    if($counter == 0){
+                                        $carousel_item_status = 'active';
+                                    }
                                     ?>
-                                    <img src="<?php echo $bg_imageURL; ?>" class="img-fluid"> 
-                                </div> 
-                                <div class="card-img-overlay">Slide 2</div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    <div class="carousel-item"> 
-                        <div class="col-md-3"> 
-                            <div class="card"> 
-                                <div class="card-img"> 
-                                    <?php 
-                                        $bg_image = get_sub_field('image');
-                                        if($bg_image){
-                                            $bg_imageURL = wp_get_attachment_image_url( $image, 'large');
-                                        }
-                                        else{
-                                            $bg_imageURL = get_template_directory_uri().'/assets/images/242611452_229150395849798_1430821725233963132_n.PNG';
-                                        }
-                                    ?>
-                                    <img src="<?php echo $bg_imageURL; ?>" class="img-fluid"> 
-                                </div> 
-                                <div class="card-img-overlay">Slide 3</div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    <div class="carousel-item"> 
-                        <div class="col-md-3"> 
-                            <div class="card"> 
-                                <div class="card-img"> 
-                                    <?php 
-                                        $bg_image = get_sub_field('image');
-                                        if($bg_image){
-                                            $bg_imageURL = wp_get_attachment_image_url( $image, 'large');
-                                        }
-                                        else{
-                                            $bg_imageURL = get_template_directory_uri().'/assets/images/242611452_229150395849798_1430821725233963132_n.PNG';
-                                        }
-                                    ?>
-                                    <img src="<?php echo $bg_imageURL; ?>" class="img-fluid"> 
-                                </div> <div class="card-img-overlay">Slide 4</div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    <div class="carousel-item"> 
-                        <div class="col-md-3"> 
-                            <div class="card"> 
-                                <div class="card-img"> 
-                                    <?php 
-                                        $bg_image = get_sub_field('image');
-                                        if($bg_image){
-                                            $bg_imageURL = wp_get_attachment_image_url( $image, 'large');
-                                        }
-                                        else{
-                                            $bg_imageURL = get_template_directory_uri().'/assets/images/242611452_229150395849798_1430821725233963132_n.PNG';
-                                        }
-                                    ?>
-                                    <img src="<?php echo $bg_imageURL; ?>" class="img-fluid"> 
-                                </div> 
-                                <div class="card-img-overlay">Slide 5</div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    <div class="carousel-item"> 
-                        <div class="col-md-3"> 
-                            <div class="card"> 
-                                <div class="card-img"> 
-                                    <?php 
-                                        $bg_image = get_sub_field('image');
-                                        if($bg_image){
-                                            $bg_imageURL = wp_get_attachment_image_url( $image, 'large');
-                                        }
-                                        else{
-                                            $bg_imageURL = get_template_directory_uri().'/assets/images/242611452_229150395849798_1430821725233963132_n.PNG';
-                                        }
-                                    ?>
-                                    <img src="<?php echo $bg_imageURL; ?>" class="img-fluid"> 
-                                </div> 
-                                <div class="card-img-overlay">Slide 6</div> 
-                            </div> 
-                        </div> 
-                    </div> 
+                                    <div class="carousel-item <?php echo $carousel_item_status; ?>"> 
+                                        <div class="col-md-3"> 
+                                            <div class="card border border-white">
+                                                <div class="card-img"> 
+                                                    <?php 
+                                                        $image = get_sub_field('image');
+                                                        if($image){
+                                                            $imageURL = wp_get_attachment_image_url( $image, 'large');
+                                                        }
+                                                        else{
+                                                            $imageURL = get_template_directory_uri().'/assets/images/242611452_229150395849798_1430821725233963132_n.PNG';
+                                                        }
+                                                    ?>
+                                                    <img src="<?php echo $imageURL; ?>" class="img-fluid"> 
+                                                </div> 
+                                            </div> 
+                                        </div> 
+                                    </div>
+                                <?php
+                                $counter++;
+                                endwhile;
+                            else: 
+                            endif;
+                        ?>
+                    </div>
                 </div> 
                 <!-- <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev"> 
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span> 

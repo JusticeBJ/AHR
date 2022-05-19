@@ -37,6 +37,10 @@
   src: url("../fonts/Gotham-Font/GothamMedium.ttf");
 }
 @font-face {
+  font-family: "Gotham Bold";
+  src: url("../fonts/Gotham-Font/GothamBold.ttf");
+}
+@font-face {
   font-family: "Arial";
   src: url("../fonts/arial/ARIAL.ttf");
 }
@@ -215,8 +219,7 @@ h5 {
   }
 }
 
-html,
-body {
+:root {
   font-family: "DM Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -246,6 +249,13 @@ img {
 
 .border-red {
   border-color: #F9423A !important;
+}
+
+#main .custom-section {
+  min-height: 50vh;
+}
+#main .custom-section:nth-child(even) {
+  background-color: #F9F9F9;
 }
 
 .button {
@@ -379,6 +389,59 @@ img {
   top: 42px;
 }
 
+.footer__col ul li {
+  list-style: none;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  margin-bottom: 10px;
+}
+.footer__col ul li a {
+  color: #131E29;
+  text-decoration: none;
+  display: table;
+  border-bottom: 1px solid transparent;
+}
+.footer__col ul li a:hover {
+  text-decoration: none;
+  border-color: inherit;
+}
+.footer__col ul li:first-child {
+  line-height: 16px;
+  margin-bottom: 20px;
+}
+.footer__col ul li:first-child a {
+  color: #F9423A;
+  border-bottom: unset;
+  font-family: "Gotham Bold";
+  font-weight: 700;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.footer__col ul li:first-child a:hover {
+  transform: scale(1.2) !important;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.footer__col ul#menu-footer-column5 li {
+  font-size: 16px;
+}
+.footer__col ul#menu-footer-column5 li a {
+  color: #F9423A;
+  border-bottom: unset;
+  font-family: "Gotham Bold";
+  font-weight: 700;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.footer__col ul#menu-footer-column5 li a:hover {
+  transform: scale(1.2) !important;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
 .home-hero__content {
   background-size: cover;
   background-repeat: no-repeat;
@@ -417,4 +480,7 @@ img {
 
 .media-slider__icons {
   background-color: blue;
+}
+.modules__module h4 {
+  color: #F9423A;
 }

@@ -1,5 +1,4 @@
-html,
-body{ 
+:root{ 
     font-family: 'DM Sans', sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -25,4 +24,12 @@ img{
 }
 .border-red{
     border-color: $red !important;
+}
+#main{
+    .custom-section{
+        min-height: 50vh;
+        &:nth-child(even){
+            background-color: $light_grey;
+        }
+    }
 }
