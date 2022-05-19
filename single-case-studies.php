@@ -37,11 +37,11 @@ get_header();
             $loop= $counter % 2;
             $module_bg_color= '';
             $row_direction= 'flex-md-row-reverse';
-            $col_text_padding= 'pe-5';
+            $col_text_padding= 'pe-5 pe-md';
             if($loop == 1){
               $module_bg_color= 'bg-lightgrey';
               $row_direction= '';
-              $col_text_padding= 'ps-5';
+              $col_text_padding= 'ps-5 ps-md';
             }?>
             <div class="modules__module pt-5 pb-5 <?php echo $module_bg_color; ?>">
               <div class="container">
