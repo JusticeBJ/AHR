@@ -29,7 +29,18 @@
                         </figure>
                         <h5><?php echo get_the_title(); ?></h5>
                         <div class="case-study__p ps-4 mt-4 mb-4 border-start border-4 border-white">
-                            <p><?php echo get_the_excerpt(); ?></p>
+                            <?php
+                            if(strlen(get_the_excerpt()) < 130){
+                                $text= get_the_excerpt();
+                            }
+                            else{
+                                $string= substr(get_the_excerpt(), 0, 130);
+                                $words = explode( " ", $string );
+                                array_splice( $words, -1 );
+                                $text= implode( " ", $words );
+                            }
+                            ?>
+                            <p><?php echo $text; ?></p>
                         </div>
                         <a href="<?php the_permalink(); ?>" class="button button--white" role="button">READ MORE<i class="fa-solid fa-arrow-right"></i></a>
                     </article>

@@ -240,6 +240,10 @@ img {
   background-color: #F9423A;
 }
 
+.bg-lightgrey {
+  background-color: #F9F9F9;
+}
+
 .border-red {
   border-color: #F9423A !important;
 }
@@ -395,8 +399,13 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: calc(60vh - 30px);
+  height: calc(70vh - 30px);
   min-height: 300px;
+}
+@media (min-width: 768px) {
+  .hero__content {
+    height: calc(60vh - 30px);
+  }
 }
 .hero__content h1 {
   color: #ffffff;
