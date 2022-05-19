@@ -240,6 +240,10 @@ img {
   background-color: #F9423A;
 }
 
+.border-red {
+  border-color: #F9423A !important;
+}
+
 .button {
   font-family: "DM Sans";
   font-size: 14px;
@@ -346,6 +350,19 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.tag {
+  font-family: "DM SansBold";
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 13px;
+  letter-spacing: 0.15em;
+  text-align: left;
+  padding: 8px 12px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 0;
 }
 
 .header {
