@@ -463,7 +463,7 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   height: calc(70vh - 30px);
-  min-height: 300px;
+  min-height: 400px;
 }
 @media (min-width: 768px) {
   .hero__content {
@@ -498,4 +498,23 @@ img {
 
 .text-video h3 {
   color: #F9423A;
+}
+
+.cta__content {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: calc(70vh - 30px);
+  min-height: 400px;
+}
+@media (min-width: 768px) {
+  .cta__content {
+    height: calc(60vh - 30px);
+  }
+}
+.cta__content h2 {
+  color: #ffffff;
+}
+.cta__content p {
+  color: #ffffff;
 }

@@ -1,5 +1,4 @@
-.hero{
-    // padding: 14px 0;
+.cta{
     &__content{
         background-size: cover;
         background-repeat: no-repeat;
@@ -9,14 +8,11 @@
         @media (min-width: 768px){
             height: calc( 60vh - 30px);
         }
-        h1{
+        h2{
             color: $white;
-            // max-width: 782px;
-            text-shadow: 0px 0px 60px rgba(48, 49, 51, 0.3);
         }
         p{
             color: $white;
-            // max-width: 470px;
         }
     }
 }
