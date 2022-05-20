@@ -1,11 +1,21 @@
-<section class="media-slider pt-5 pb-5">
+<section class="media-slider pt-0 pb-5">
     <div class="media-slider__media">
         <div class="container-fluid g-0">
             <div class="row  g-0">   
-                <div class="col-md-6">Test2</div>  
-                <div class="col-md-5">
-                    <div class="media-slider__icons">
-                        text3
+                <div class="col-6">
+                    <h5 class="bg-red d-table px-5 py-3 mb-0"><?php echo get_sub_field('title'); ?></h5>
+                </div>  
+                <div class="col-6 col-md-5">
+                    <div class="media-slider__icons d-flex justify-content-end align-items-center h-100">
+                        <a href="<?php echo get_field('instagram_link','option'); ?>" target="_blank" class="me-2">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="<?php echo get_field('linkedin_link','option'); ?>" target="_blank" class="me-2">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                        <a href="<?php echo get_field('twitter_link','option'); ?>" target="_blank" class="me-2">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
                     </div>
                 </div>
             </div>

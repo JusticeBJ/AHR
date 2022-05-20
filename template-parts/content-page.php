@@ -9,7 +9,9 @@ if( have_rows('page_builder') ):
         include(get_template_directory().'/template-parts/layouts/hero.php');
         elseif( get_row_layout() == 'sample_case_studies' ):
         include(get_template_directory().'/template-parts/layouts/sample-case-studies.php');
-        elseif( get_row_layout() == 'our_people' ):
+        elseif( get_row_layout() == 'text_video' ):
+        include(get_template_directory().'/template-parts/layouts/text-video.php');
+        elseif( get_row_layout() == 'our_people' )://---------------------------------------------------
         include(get_template_directory().'/template-parts/layouts/our-people.php');
         elseif( get_row_layout() == 'campaigns' ):
         include(get_template_directory().'/template-parts/layouts/campaigns.php');

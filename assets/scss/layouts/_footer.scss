@@ -1,5 +1,9 @@
 .footer{
     &__col{
+        img.footer-logo{
+            margin-top: -50px;
+            margin-left: -50px;
+        }
         ul{
             li{
                 list-style: none;
@@ -12,7 +16,7 @@
                 a{
                     color: $navy_blue;
                     text-decoration: none;
-                    display: table;
+                    display: inline-block;
                     border-bottom: 1px solid transparent;
                     &:hover{
                         text-decoration: none;

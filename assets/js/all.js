@@ -13,7 +13,10 @@ $(document).ready(function(){
     //---==>>> Bootstrap Carousel
     let items = document.querySelectorAll('.carousel .carousel-item')
     items.forEach((el) => {
-      const minPerSlide = 4
+      var minPerSlide = 4
+      if($(window).innerWidth() < 576){
+        var minPerSlide = 2
+      }
       let next = el.nextElementSibling
       for (var i=1; i<minPerSlide; i++) {
         if (!next) {

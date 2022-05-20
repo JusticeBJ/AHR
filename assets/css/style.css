@@ -34,10 +34,6 @@
 }
 @font-face {
   font-family: "Gotham";
-  src: url("../fonts/Gotham-Font/GothamMedium.ttf");
-}
-@font-face {
-  font-family: "Gotham Bold";
   src: url("../fonts/Gotham-Font/GothamBold.ttf");
 }
 @font-face {
@@ -206,8 +202,8 @@ h4 {
 
 h5 {
   font-family: "Gotham";
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 16px;
+  line-height: 19px;
   letter-spacing: -0.03em;
   text-align: left;
 }
@@ -389,6 +385,10 @@ img {
   top: 42px;
 }
 
+.footer__col img.footer-logo {
+  margin-top: -50px;
+  margin-left: -50px;
+}
 .footer__col ul li {
   list-style: none;
   font-family: "DM Sans";
@@ -401,7 +401,7 @@ img {
 .footer__col ul li a {
   color: #131E29;
   text-decoration: none;
-  display: table;
+  display: inline-block;
   border-bottom: 1px solid transparent;
 }
 .footer__col ul li a:hover {
@@ -478,9 +478,24 @@ img {
   color: #ffffff;
 }
 
-.media-slider__icons {
-  background-color: blue;
+.media-slider__icons a {
+  text-decoration: none;
+}
+.media-slider__icons a i {
+  color: #131E29;
+  font-size: 30px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.media-slider__icons a:hover i {
+  color: #F9423A;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
 .modules__module h4 {
+  color: #F9423A;
+}
+
+.text-video h3 {
   color: #F9423A;
 }
