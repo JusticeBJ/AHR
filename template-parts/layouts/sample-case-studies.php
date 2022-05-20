@@ -1,6 +1,6 @@
 <section class="three-columns bg-red pt-5 pb-5">
     <div class="container">
-        <h4>CASE STUDIES</h4>
+        <h4><?php echo get_sub_field('title'); ?></h4>
         <div class="row mt-4">
             <?php 
             // args

@@ -14,8 +14,8 @@ get_header();
 <section class="hero p-3">
   <div class="container-fluid g-0">
     <div class="hero__content d-flex flex-column justify-content-center align-items-center" style="background-image: url('<?php echo $bg_imageURL; ?>');">
-      <h1 class="">CASE STUDIES</h1>
-      <p class="p-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Habitasse mattis congue.</p>
+      <h1 class=""><?php echo get_field('case_study_title','option'); ?></h1>
+      <p class="p-large"><?php echo get_field('case_study_intro_text','option'); ?></p>
     </div>
   </div>
 </section>
