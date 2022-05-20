@@ -442,12 +442,16 @@ img {
   -webkit-transition: all 0.3s ease;
 }
 
+.page--404 H4 {
+  color: #F9423A;
+}
+
 .home-hero__content {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: calc(100vh - 30px);
-  min-height: 300px;
+  min-height: 500px;
 }
 .home-hero__content h1 {
   color: #ffffff;

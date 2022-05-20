@@ -5,12 +5,12 @@
 <!-- Page 404 -->
 <section class="page page--404">
 	<div class="container">
-		<article class="hentry">
+		<article class="hentry  min-vh-100 d-flex flex-column justify-content-center align-items-center">
 			<header class="page__header">
-				<h1 class="page__title title"><?php _e( 'Page not found', 'mdf_theme_translate' ); ?></h1>
+				<h4 class="page__title title"><?php _e( 'Page not found', 'mdf_theme_translate' ); ?></h4>
 			</header>
 			<div class="page__content">
-				<p><?php _e( 'The page you are looking is under construction or does not exist.', 'mdf_theme_translate' ); ?></p>
+				<p class="p-large"><?php _e( 'The page you are looking is under construction or does not exist.', 'mdf_theme_translate' ); ?></p>
 			</div>
 		</article>
 	</div>
