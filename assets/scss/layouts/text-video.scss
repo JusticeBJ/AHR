@@ -2,4 +2,21 @@
     h3{
         color: $red;
     }
+    &__video{
+        iframe{
+            $video_width: 280px;
+            width: $video_width;
+            height: calc($video_width / 1.78);
+            @media (min-width: 575px){
+                $video_width: 400px;
+                width: $video_width;
+                height: calc($video_width / 1.78);
+            }
+            @media (min-width: 1200px){
+                $video_width: 600px;
+                width: $video_width;
+                height: calc($video_width / 1.78);
+            }
+        }
+    }
 }

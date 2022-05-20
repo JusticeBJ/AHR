@@ -2,16 +2,18 @@
     <div class="container">
         <div class="row flex-md-row-reverse">
             <div class="col-lg-6 pb-5">
-                <?php 
-                    $embed_video= get_sub_field('youtube_video_link');
-                    if($embed_video){
-                        echo $embed_video;
-                    }
-                    else{?>
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/t0Q2otsqC4I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <?php
-                    }
-                ?>
+                <div class="text-video__video">
+                    <?php 
+                        $embed_video= get_sub_field('youtube_video_link');
+                        if($embed_video){
+                            echo $embed_video;
+                        }
+                        else{?>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/t0Q2otsqC4I?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <?php
+                        }
+                    ?>
+                </div>
             </div>
             <div class="col-lg-6 d-flex flex-column justify-content-center">
                 <h3><?php echo get_sub_field('title'); ?></h3>

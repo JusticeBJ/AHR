@@ -499,6 +499,22 @@ img {
 .text-video h3 {
   color: #F9423A;
 }
+.text-video__video iframe {
+  width: 280px;
+  height: 157.3033707865px;
+}
+@media (min-width: 575px) {
+  .text-video__video iframe {
+    width: 400px;
+    height: 224.7191011236px;
+  }
+}
+@media (min-width: 1200px) {
+  .text-video__video iframe {
+    width: 600px;
+    height: 337.0786516854px;
+  }
+}
 
 .cta__content {
   background-size: cover;
