@@ -34,3 +34,34 @@ img{
         }
     }
 }
+.chat-box{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 15px;
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    background-image: url('../images/Vector 1.PNG');
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    img{
+        width: 25px;
+        height: auto;
+        transition: all .3s ease;
+        -webkit-transition: all .3s ease;
+    }
+    &:hover{
+        cursor: pointer;
+        img{
+            width: 35px;
+            height: auto;
+            transition: all .3s ease;
+            -webkit-transition: all .3s ease;
+        }
+    }
+}

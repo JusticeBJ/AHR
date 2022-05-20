@@ -254,6 +254,38 @@ img {
   background-color: #F9F9F9;
 }
 
+.chat-box {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 15px;
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 5;
+  background-image: url("../images/Vector 1.PNG");
+  background-size: contain;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+.chat-box img {
+  width: 25px;
+  height: auto;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.chat-box:hover {
+  cursor: pointer;
+}
+.chat-box:hover img {
+  width: 35px;
+  height: auto;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+
 .button {
   font-family: "DM Sans";
   font-size: 14px;
@@ -375,14 +407,69 @@ img {
   margin-bottom: 0;
 }
 
-.header {
-  padding-top: 10px;
-}
 .header .logo {
   height: 64px;
   width: 131px;
   left: 42px;
   top: 42px;
+}
+.header__button {
+  color: #ffffff !important;
+  background-color: #F9423A;
+  display: flex;
+  width: 80px;
+  margin-right: -24px;
+}
+@media (min-width: 768px) {
+  .header__button {
+    width: 130px;
+  }
+}
+.header__button span.header-btn-text {
+  display: none;
+}
+@media (min-width: 768px) {
+  .header__button span.header-btn-text {
+    display: block;
+    margin-right: 10px;
+  }
+}
+.header__button span.header-btn-icon {
+  display: block;
+  width: 25px;
+  padding-top: 3px;
+}
+.header__button span.header-btn-icon span {
+  display: block;
+  background-color: #ffffff !important;
+  width: 25px;
+  height: 3px;
+  margin-bottom: 4px;
+  border-radius: 3px;
+}
+.header__button span.header-btn-icon span:nth-child(1) {
+  transform: translateX(10px);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.header__button span.header-btn-icon span:nth-child(2) {
+  transform: translateX(5px);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.header__button:hover span.header-btn-icon span:nth-child(1) {
+  transform: translateX(0);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.header__button:hover span.header-btn-icon span:nth-child(2) {
+  transform: translateX(0);
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.header__button:focus {
+  outline: none;
+  box-shadow: none;
 }
 
 .footer__col img.footer-logo {

@@ -1,6 +1,6 @@
 
 .header{ 
-    padding-top: 10px;
+    // padding-top: 10px;
     .logo{
         height: 64px;
         width: 131px;
@@ -8,5 +8,66 @@
         top: 42px;
         // border-radius: [object Object]px;
 
+    }
+    &__button{
+        color: $white !important;
+        background-color: $red;
+        display: flex;
+        width: 80px;
+        margin-right: -24px;
+        @media (min-width: 768px){
+            width: 130px;
+        }
+        span.header-btn-text{
+            display: none;
+            @media (min-width: 768px){
+                display: block;
+                margin-right: 10px;
+            }
+        }
+        span.header-btn-icon{
+            display: block;
+            width: 25px;
+            // height: 20px;
+            padding-top: 3px;
+            span{
+                display: block;
+                background-color: $white !important;
+                width: 25px;
+                height: 3px;
+                margin-bottom: 4px;
+                border-radius: 3px;
+                &:nth-child(1){
+                    transform: translateX(10px);
+                    transition: all .3s ease;
+                    -webkit-transition: all .3s ease;
+                }
+                &:nth-child(2){
+                    transform: translateX(5px);
+                    transition: all .3s ease;
+                    -webkit-transition: all .3s ease;
+                }
+            }
+        }
+        &:hover{ 
+            span.header-btn-icon{
+                span{
+                    &:nth-child(1){
+                        transform: translateX(0);
+                        transition: all .3s ease;
+                        -webkit-transition: all .3s ease;
+                    }
+                    &:nth-child(2){
+                        transform: translateX(0);
+                        transition: all .3s ease;
+                        -webkit-transition: all .3s ease;
+                    }
+                }
+            }
+        }
+        &:focus{
+            outline: none;
+            box-shadow: none;
+        }
     }
 }
