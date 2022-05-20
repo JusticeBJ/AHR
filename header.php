@@ -3,25 +3,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <?php 
-    if(get_field('title_tag')){?>
-      <title><?php echo get_field('title_tag'); wp_title();  echo ' » FTK'; ?></title>
-      <?php
-    }
-    else{?>
-      <title><?php wp_title();  echo ' » FTK';  ?></title>
-      <?php
-    }
-    if(get_field('meta_description')){?>
-      <meta name="description" content="<?php echo get_field('meta_description'); ?>">
-      <?php
-    }
-    if(get_field('meta_keywords')){?>
-      <meta name="keywords" content="<?php echo get_field('meta_keywords'); ?>">
-      <?php
-    }
-  ?>
-  <meta name="author" content="madefinition.com">
+  <title><?php wp_title();  echo ' » AHR';  ?></title>
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> > 
