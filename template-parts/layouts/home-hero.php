@@ -16,7 +16,7 @@
       <a href="<?php echo get_sub_field('button_link'); ?>" class="button-big button-big--red" role="button"><?php echo get_sub_field('button_text'); ?><i class="fa-solid fa-arrow-right"></i></a>
     </div>
   </div>
-  <div class="home-hero__brand d-flex position-absolute bottom-0 start-0 pt-1">
+  <div class="home-hero__brand d-flex position-absolute bottom-0 start-0 ps-4">
   <?php
     if( have_rows('brands') ):
         while( have_rows('brands') ) : the_row();
