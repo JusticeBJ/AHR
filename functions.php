@@ -84,3 +84,16 @@ if (! function_exists('fa_custom_setup_kit') ) {
 	}
 }
 fa_custom_setup_kit('https://kit.fontawesome.com/b263694896.js');
+
+
+//----------=======>>> WordPress Search for Custom Post Type <<<=======---------- 
+//https://pagedart.com/blog/wordpress-search-for-custom-post-type/
+function my_search_form( $form ) {
+	$form = '
+	<form id="search" action="' . home_url( '/' ) . '" method="get">
+	<input type="hidden" name="post_type" value="book" />
+	<input id="s" name="s" type="text" value="' . get_search_query() . '" />
+	</form>';
+	return $form;
+}
+add_filter( 'get_search_form', 'my_search_form' );
